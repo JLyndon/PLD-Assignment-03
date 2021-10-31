@@ -9,7 +9,7 @@ def apl_price():
     return cost
 
 def general_operator(balance, price):
-    max_no_apl = math.floor(balance//price) 
+    max_no_apl = math.floor(balance/price) 
     change = balance % price
     return max_no_apl, change
 
