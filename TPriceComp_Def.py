@@ -1,22 +1,18 @@
-def apl_input():
-    QuantApl = int(input("How many apples?\n> "))
-    return QuantApl
+def usr_input():
+    QuantApl = int(input("How many apples? \n> "))
+    QuantOrng = int(input("\nHow many oranges? \n> "))
+    return QuantApl,QuantOrng
 
-def orng_input():
-    QuantOrng = int(input("\nHow many oranges?\n> "))
-    return QuantOrng
-
-def total_prc(Apl_quant, Orng_quant):
-    product_01 = Apl_quant*20
-    product_02 = Orng_quant*25
-    summation = product_01 + product_02
+def total_(NumApl, NumOrng):
+    ttlprc_apl = NumApl*20
+    ttlprc_orng = NumOrng*25
+    summation = ttlprc_apl + ttlprc_orng
     return summation
 
-Apple = apl_input()
-Orange = orng_input()
+raw_input = usr_input()
+grnd_total = total_(raw_input[0], raw_input[1])
 
-grnd_total = total_prc(Apple, Orange)
-print(f"\nThe total amount is {grnd_total}.")
+print(f"The total amount is {grnd_total}.")
 
 
 
