@@ -1,8 +1,15 @@
-def user_input():
+def apl_input():
     QuantApl = int(input("How many apples?\n> "))
+    return QuantApl
+
+def orng_input():
     QuantOrng = int(input("\nHow many oranges?\n> "))
-    return QuantApl, QuantOrng
+    return QuantOrng
 
-multiplier = user_input()
+Apple = apl_input()
+Orange = orng_input()
 
-print(multiplier)
+
+
+
+
