@@ -8,18 +8,15 @@ def apl_price():
     cost = float(input("\nEnter the price of an apple: "))
     return cost
 
-def quantity_operator(balance, price):
+def general_operator(balance, price):
     max_no_apl = math.floor(balance//price) 
-    return max_no_apl
-def change_operator(balance, price):
     change = balance % price
-    return change
+    return max_no_apl, change
 
 dividend = user_money()
 divisor = apl_price()
 
-output_01 = quantity_operator(dividend, divisor)
-output_02 = change_operator(dividend, divisor)
+fnl_output = general_operator(dividend, divisor)
 
-print(f"\nYou can purchase {output_01} apples and your change is {output_02:.2f} pesos.")
+print(f"\nYou can buy {fnl_output[0]} apples and your change is {fnl_output[1]:.2f} pesos.")
 
