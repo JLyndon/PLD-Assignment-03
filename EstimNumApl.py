@@ -13,10 +13,7 @@ def general_operator(balance, price):
     change = balance % price
     return max_no_apl, change
 
-dividend = user_money()
-divisor = apl_price()
-
-fnl_output = general_operator(dividend, divisor)
+fnl_output = general_operator(user_money(), apl_price())
 
 print(f"\nYou can buy {fnl_output[0]} apples and your change is {fnl_output[1]:.2f} pesos.")
 
